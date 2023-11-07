@@ -8,18 +8,20 @@ def rename_file(nama_lama, nama_baru):
     os.rename(lokasi_fail, destinasi_fail)
 
 
-def main():
+def papar_fail():
     senarai_fail = glob.glob("../DFP40203_MK10_Selasa/*.txt")
     for nama_fail in senarai_fail:
         print(nama_fail)
 
+
+def main():
+    papar_fail()
+    
     nama_lama = input("masukkan nama lama : ")
     nama_baru = input("masukkan nama baru : ")
     rename_file(nama_lama, nama_baru)
 
-    senarai_fail = glob.glob("../DFP40203_MK10_Selasa/*.txt")
-    for nama_fail in senarai_fail:
-        print(nama_fail)
+    papar_fail()
 
 
 if __name__ == '__main__':
